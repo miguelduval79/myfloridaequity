@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" role="img" font-family="Helvetica,Arial,sans-serif">
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="450" y="40" text-anchor="middle" font-size="16" font-weight="700" fill="#0f2547">Payment may change when the draw period ends</text>
+
+  <!-- gridlines -->
+  <g stroke="#eef2f7" stroke-width="2">
+    <path d="M120 100 h700"/><path d="M120 160 h700"/><path d="M120 220 h700"/>
+  </g>
+  <path d="M120 270 h700" stroke="#d9e2ee" stroke-width="2"/>
+
+  <!-- bar 1: during draw -->
+  <rect x="250" y="180" width="150" height="90" rx="8" fill="#9cc4f7"/>
+  <text x="325" y="168" text-anchor="middle" font-size="13" font-weight="700" fill="#16345f">Interest-focused</text>
+  <text x="325" y="292" text-anchor="middle" font-size="14" font-weight="700" fill="#0f2547">During draw period</text>
+
+  <!-- bar 2: after draw -->
+  <rect x="520" y="100" width="150" height="170" rx="8" fill="#1d6fe0"/>
+  <text x="595" y="88" text-anchor="middle" font-size="13" font-weight="700" fill="#1558b8">Principal + interest</text>
+  <text x="595" y="292" text-anchor="middle" font-size="14" font-weight="700" fill="#0f2547">After draw period</text>
+
+  <!-- increase arrow -->
+  <path d="M420 150 h70" stroke="#e2a13a" stroke-width="3" fill="none" stroke-dasharray="6 5"/>
+  <text x="455" y="140" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a9741c">payment can increase</text>
+
+  <text x="450" y="322" text-anchor="middle" font-size="12.5" fill="#64748b">Illustrative only &#8212; actual amounts depend on your balance, rate and loan terms</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Florida Home Equity Guide logo">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f4f8f"/><stop offset="1" stop-color="#0f2547"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#lg)"/>
+  <path d="M9.5 21.5 L20 12.5 L30.5 21.5" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13 20.5 V29.5 H27 V20.5" fill="none" stroke="#bfe0ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16 27.2 L19 24.2 L22 26.4 L26 21.8" fill="none" stroke="#4fa3ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

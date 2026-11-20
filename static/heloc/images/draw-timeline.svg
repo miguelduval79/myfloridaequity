@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" role="img" font-family="Helvetica,Arial,sans-serif">
+  <rect width="900" height="260" fill="#ffffff"/>
+
+  <!-- draw block -->
+  <rect x="40" y="70" width="470" height="92" rx="14" fill="#eaf2fd" stroke="#cfe0fb"/>
+  <text x="275" y="106" text-anchor="middle" font-size="16" font-weight="800" fill="#16345f">DRAW PERIOD</text>
+  <text x="275" y="132" text-anchor="middle" font-size="13.5" fill="#33445c">Borrow / repay / potentially borrow again</text>
+
+  <!-- arrow -->
+  <path d="M515 116 h58" stroke="#9db4cf" stroke-width="3" fill="none"/>
+  <path d="M578 116 l-12 -8 v16 z" fill="#9db4cf"/>
+
+  <!-- repayment block -->
+  <rect x="590" y="70" width="270" height="92" rx="14" fill="#0f2547"/>
+  <text x="725" y="106" text-anchor="middle" font-size="16" font-weight="800" fill="#ffffff">REPAYMENT PERIOD</text>
+  <text x="725" y="132" text-anchor="middle" font-size="13" fill="#cddff6">No new draws &#8212; repay the balance</text>
+
+  <!-- baseline -->
+  <path d="M40 196 h820" stroke="#dfe6f0" stroke-width="3"/>
+  <path d="M40 190 v12 M860 190 v12" stroke="#dfe6f0" stroke-width="3"/>
+  <text x="450" y="226" text-anchor="middle" font-size="13" fill="#64748b">Time &#8212; draw-period and repayment-period lengths vary by lender and loan</text>
+</svg>

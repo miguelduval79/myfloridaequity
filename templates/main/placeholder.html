@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="robots" content="{{ robots }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main/css/style.css') }}?v=20261002-2">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">&#127968;</span>
+      <span class="brand-name">{{ site_name }}</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/#options">Options</a>
+      <a href="/#compare">Compare</a>
+      <a href="/#learn">Learn</a>
+      <a class="btn btn-primary btn-sm" href="/">Back to overview</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="section">
+    <div class="container narrow center">
+      <p class="eyebrow">{{ 'Not found' if is_404 else 'Coming soon' }}</p>
+      <h1>{{ heading }}</h1>
+      <p class="lead">{{ blurb }}</p>
+      <p>This destination is part of the planned equity-comparison structure. It will be connected once the
+        dedicated page or calculator is built.</p>
+      <p><a class="btn btn-primary" href="/">Back to the home equity overview</a></p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="muted"><strong>{{ site_name }}</strong> &mdash; educational information only, not a loan offer.</p>
+  </div>
+</footer>
+</body>
+</html>

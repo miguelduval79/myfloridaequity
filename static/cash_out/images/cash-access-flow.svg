@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" font-family="Helvetica,Arial,sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+
+  <g font-size="13.5" font-weight="700">
+    <rect x="220" y="14" width="460" height="44" rx="11" fill="#eaf2fd" stroke="#cfe0fb"/>
+    <text x="450" y="42" text-anchor="middle" fill="#16345f">Home value</text>
+
+    <rect x="220" y="68" width="460" height="44" rx="11" fill="#eaf2fd" stroke="#cfe0fb"/>
+    <text x="450" y="96" text-anchor="middle" fill="#16345f">&#8722; Mortgage balance</text>
+
+    <rect x="220" y="122" width="460" height="44" rx="11" fill="#dbe9fb" stroke="#b9d3f4"/>
+    <text x="450" y="150" text-anchor="middle" fill="#16345f">= Estimated home equity</text>
+
+    <rect x="220" y="176" width="460" height="44" rx="11" fill="#eaf2fd" stroke="#cfe0fb"/>
+    <text x="450" y="204" text-anchor="middle" fill="#16345f">Apply lending / LTV requirements</text>
+
+    <rect x="220" y="230" width="460" height="44" rx="11" fill="#dbe9fb" stroke="#b9d3f4"/>
+    <text x="450" y="258" text-anchor="middle" fill="#16345f">= Potential borrowing capacity</text>
+
+    <rect x="220" y="284" width="460" height="44" rx="11" fill="#eaf2fd" stroke="#cfe0fb"/>
+    <text x="450" y="312" text-anchor="middle" fill="#16345f">Consider existing mortgage payoff + costs</text>
+
+    <rect x="220" y="338" width="460" height="44" rx="11" fill="#1d6fe0"/>
+    <text x="450" y="366" text-anchor="middle" fill="#ffffff">= Potential cash proceeds</text>
+  </g>
+  <g fill="#9db4cf">
+    <path d="M445 60 l5 8 h-10 z"/><path d="M445 114 l5 8 h-10 z"/><path d="M445 168 l5 8 h-10 z"/>
+    <path d="M445 222 l5 8 h-10 z"/><path d="M445 276 l5 8 h-10 z"/><path d="M445 330 l5 8 h-10 z"/>
+  </g>
+</svg>

@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="robots" content="{{ robots }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta name="theme-color" content="#0f2547">
+  <link rel="icon" href="{{ url_for('static', filename='cash_out/images/logo.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static', filename='cash_out/css/style.css') }}?v=20261002-1">
+  <script defer src="{{ url_for('static', filename='cash_out/js/main.js') }}?v=20261002-1"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="{{ url_for('static', filename='cash_out/images/logo.svg') }}" alt="" width="34" height="34">
+      <span class="brand-name">{{ site_name }}</span>
+    </a>
+    <nav class="nav-links" aria-label="On this page">
+      <a href="#equity">Home Equity</a>
+      <a href="#how">How It Works</a>
+      <a href="#consolidation">Debt Consolidation</a>
+      <a href="#vs-heloc">vs HELOC</a>
+      <a href="#costs">Costs</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Calculate My Home Equity</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="hero-copy-wrap container">
+      <div class="hero-copy">
+        <p class="eyebrow">Cash-Out Refinance</p>
+        <h1>Turn Part of Your Home Equity Into Cash</h1>
+        <p class="hero-sub">A cash-out refinance replaces your existing mortgage with a new, larger mortgage.
+          The difference &mdash; after applicable costs and payoff amounts &mdash; may provide cash you can use for
+          your financial goals. How much cash is available depends partly on your home equity and lending
+          requirements.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Calculate My Home Equity</a>
+          <a class="btn btn-ghost btn-lg" href="#how">Learn How Cash-Out Refinancing Works</a>
+        </div>
+        <p class="hero-note">Educational information only. No account, no phone number, no obligation.</p>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="{{ url_for('static', filename='cash_out/images/florida-home.jpg') }}"
+           alt="A Florida home exterior, representing the property whose equity can support a cash-out refinance."
+           width="1280" height="633" fetchpriority="high" decoding="async">
+    </div>
+  </section>
+
+  <!-- 2. START WITH YOUR HOME EQUITY -->
+  <section id="equity" class="section">
+    <div class="container narrow">
+      <h2>Start With Your Home Equity</h2>
+      <p>Everything starts with understanding your home equity. It is generally the difference between your home's
+        estimated value and your current mortgage balance.</p>
+
+      <div class="formula" role="math" aria-label="Estimated home equity equals estimated home value minus current mortgage balance">
+        <span class="formula-part">Estimated Home Equity</span>
+        <span class="formula-op">=</span>
+        <span class="formula-part">Estimated Home Value</span>
+        <span class="formula-op">&minus;</span>
+        <span class="formula-part">Current Mortgage Balance</span>
+      </div>
+
+      <figure class="figure">
+        <img src="{{ url_for('static', filename='cash_out/images/equity-diagram.svg') }}"
+             alt="Diagram of an estimated $450,000 home value minus a $275,000 mortgage balance giving about $175,000 of estimated home equity."
+             width="900" height="360" loading="lazy" decoding="async">
+        <figcaption>Illustrative example only &mdash; your own numbers will differ.</figcaption>
+      </figure>
+
+      <p>Example: estimated home value <strong>$450,000</strong> &minus; mortgage balance <strong>$275,000</strong>
+        = estimated equity <strong>$175,000</strong>.</p>
+      <div class="callout">
+        <p><strong>Important:</strong> $175,000 of estimated equity does <em>not</em> necessarily mean you can
+          receive $175,000 in cash. Actual borrowing capacity depends on factors including lender loan-to-value
+          limits, credit, income, the property, your mortgage balance, closing costs and underwriting requirements.</p>
+      </div>
+      <p><a class="btn btn-primary" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Calculate Your Home Equity</a></p>
+    </div>
+  </section>
+
+  <!-- 3. HOW IT WORKS -->
+  <section id="how" class="section section-tint">
+    <div class="container narrow">
+      <h2>How Does a Cash-Out Refinance Work?</h2>
+      <p>A cash-out refinance <strong>replaces your existing first mortgage</strong>. You take out a new, larger
+        mortgage, the old mortgage is paid off, and the difference may become available to you as cash after
+        applicable costs and adjustments.</p>
+
+      <figure class="figure">
+        <img src="{{ url_for('static', filename='cash_out/images/cashout-flow.svg') }}"
+             alt="Flow diagram: current home, existing mortgage, new larger mortgage, existing mortgage is paid off, and the difference may become available as cash after applicable costs."
+             width="900" height="300" loading="lazy" decoding="async">
+        <figcaption>Existing mortgage &rarr; new larger mortgage &rarr; old mortgage paid off &rarr; difference may become cash.</figcaption>
+      </figure>
+
+      <div class="callout">
+        <p>This is the key difference from a HELOC: a cash-out refinance generally <strong>replaces</strong> your
+          existing first mortgage. It does not simply add a separate cash account while leaving the original
+          mortgage unchanged.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. WHAT CAN FUNDS BE USED FOR -->
+  <section class="section">
+    <div class="container narrow">
+      <h2>What Can Cash-Out Refinance Funds Be Used For?</h2>
+      <p>Homeowners investigate cash-out refinancing for many reasons. Common examples include:</p>
+      <ul class="checklist">
+        <li>consolidating debts</li>
+        <li>paying higher-interest credit-card balances</li>
+        <li>paying off other loans</li>
+        <li>home improvements</li>
+        <li>major planned expenses</li>
+        <li>education expenses</li>
+        <li>other financial goals</li>
+      </ul>
+      <div class="callout">
+        <p>Important trade-off: using home equity this way converts part of your equity into <strong>mortgage debt
+          secured by your property</strong>. It is not automatically financially beneficial.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. DEBT CONSOLIDATION -->
+  <section id="consolidation" class="section section-tint">
+    <div class="container narrow">
+      <h2>Using Home Equity to Consolidate Debt</h2>
+      <p>A homeowner may be carrying several balances at once &mdash; a mortgage, credit cards, personal loans and
+        other debts. A cash-out refinance may provide a lump sum that can potentially be used to pay some of those
+        balances. This is often called <em>cash out refinance for debt consolidation</em>.</p>
+
+      <figure class="figure">
+        <img src="{{ url_for('static', filename='cash_out/images/debt-consolidation.svg') }}"
+             alt="Diagram: a mortgage, credit cards, personal loans and other debts may be consolidated by paying some balances with a cash-out refinance lump sum."
+             width="900" height="280" loading="lazy" decoding="async">
+        <figcaption>Potentially paying several balances from one lump sum &mdash; restructuring debt, not erasing it.</figcaption>
+      </figure>
+
+      <p>Why people consider it: some unsecured debts, particularly credit cards, may carry higher interest rates
+        than mortgage financing. However, refinancing does <strong>not automatically save money</strong>.</p>
+      <p>Important considerations if you are weighing a <em>cash out refinance to pay off debt</em> or a
+        <em>cash out refinance to pay credit cards</em>:</p>
+      <ul class="checklist">
+        <li>your current mortgage rate versus a new mortgage rate</li>
+        <li>closing costs</li>
+        <li>the loan term and amount borrowed</li>
+        <li>total interest over time</li>
+        <li>converting unsecured debt into debt secured by your home</li>
+        <li>whether the credit-card balances actually stay paid off afterward</li>
+      </ul>
+      <p>Keep in mind that debt consolidation <strong>restructures debt</strong> &mdash; it does not eliminate it.</p>
+    </div>
+  </section>
+
+  <!-- 6. VS HELOC -->
+  <section id="vs-heloc" class="section">
+    <div class="container narrow">
+      <h2>Cash-Out Refinance vs HELOC</h2>
+      <p>These two options are structured quite differently. Here is the <em>cash out refinance vs HELOC</em>
+        comparison at a glance:</p>
+
+      <div class="compare">
+        <div class="compare-col">
+          <h3>Cash-Out Refinance</h3>
+          <ul>
+            <li>generally <strong>replaces</strong> the existing mortgage</li>
+            <li>creates a new mortgage balance</li>
+            <li>may provide proceeds as a <strong>lump sum</strong> after closing</li>
+            <li>you receive the cash rather than drawing from a line</li>
+            <li>mortgage terms and rate may change</li>
+          </ul>
+        </div>
+        <div class="compare-col">
+          <h3>HELOC</h3>
+          <ul>
+            <li>normally exists <strong>alongside</strong> the existing first mortgage</li>
+            <li>provides a <strong>revolving credit line</strong></li>
+            <li>funds may be drawn as needed during the draw period</li>
+            <li>commonly has variable-rate characteristics</li>
+            <li>payments can change</li>
+          </ul>
+        </div>
+      </div>
+      <p>There is no universally better option &mdash; the appropriate structure depends on your situation, your
+        existing mortgage rate, how much you need and how you expect to use it.</p>
+    </div>
+  </section>
+
+  <!-- 7. LUMP SUM VS LINE -->
+  <section class="section section-tint">
+    <div class="container narrow">
+      <h2>Lump Sum vs Line of Credit</h2>
+      <p>The way you receive the money is an important difference:</p>
+      <figure class="figure">
+        <img src="{{ url_for('static', filename='cash_out/images/lump-sum-vs-line.svg') }}"
+             alt="Comparison: a cash-out refinance generally provides available cash proceeds as a lump sum, whereas a HELOC provides a credit line you draw from as needed."
+             width="900" height="300" loading="lazy" decoding="async">
+        <figcaption>Lump sum after closing (cash-out refinance) vs drawing as needed (HELOC).</figcaption>
+      </figure>
+      <p>Someone who needs a defined amount for debt consolidation may evaluate these options differently from
+        someone who expects expenses over time. Neither product is universally better.</p>
+    </div>
+  </section>
+
+  <!-- 8. EXISTING MORTGAGE -->
+  <section class="section">
+    <div class="container narrow">
+      <h2>What Happens to My Existing Mortgage?</h2>
+      <p>A cash-out refinance <strong>is a refinance</strong>. Your existing mortgage is generally paid off and
+        replaced with the new mortgage. That means it is worth considering more than just how much cash you can
+        receive. Compare:</p>
+      <ul class="checklist">
+        <li>your existing mortgage rate versus a potential new rate</li>
+        <li>your remaining mortgage term versus a new loan term</li>
+        <li>your monthly payment</li>
+        <li>closing costs</li>
+        <li>total borrowing cost</li>
+        <li>break-even considerations</li>
+      </ul>
+      <p>This matters especially if you already have a favorable existing mortgage rate.</p>
+    </div>
+  </section>
+
+  <!-- 9. COSTS -->
+  <section id="costs" class="section section-tint">
+    <div class="container narrow">
+      <h2>Costs and Considerations</h2>
+      <p>Cash-out refinancing may involve costs. Potential considerations include:</p>
+      <ul class="checklist">
+        <li>closing costs</li>
+        <li>appraisal / valuation requirements where applicable</li>
+        <li>lender fees</li>
+        <li>interest rate</li>
+        <li>new loan amount</li>
+        <li>mortgage term</li>
+        <li>monthly payment</li>
+        <li>total interest</li>
+        <li>available equity and loan-to-value requirements</li>
+        <li>credit / income underwriting</li>
+      </ul>
+      <p class="muted">Specific fees and thresholds vary by lender; we do not publish lender-specific figures.</p>
+    </div>
+  </section>
+
+  <!-- 10. HOW MUCH CASH -->
+  <section class="section">
+    <div class="container narrow">
+      <h2>How Much Cash Could I Potentially Access?</h2>
+      <p>The answer begins with home equity &mdash; but it is <strong>not simply equity = available cash</strong>:</p>
+      <figure class="figure">
+        <img src="{{ url_for('static', filename='cash_out/images/cash-access-flow.svg') }}"
+             alt="Flow: home value, minus mortgage balance, equals estimated home equity, then apply lending and loan-to-value requirements to get potential borrowing capacity, then consider the existing mortgage payoff and costs to get potential cash proceeds."
+             width="900" height="360" loading="lazy" decoding="async">
+        <figcaption>Equity is the starting point; lending requirements, payoff and costs shape the potential cash proceeds.</figcaption>
+      </figure>
+      <p>The exact amount requires actual loan terms and underwriting. Start with your estimated equity:</p>
+      <p><a class="btn btn-primary" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Start by Calculating My Home Equity</a></p>
+    </div>
+  </section>
+
+  <!-- 11. CALCULATOR -->
+  <section class="section section-tint">
+    <div class="container narrow">
+      <h2>Cash-Out Refinance Calculator</h2>
+      <p>A useful <em>cash out refinance calculator</em> would eventually help evaluate:</p>
+      <ul class="checklist">
+        <li>estimated home value and mortgage balance</li>
+        <li>estimated equity</li>
+        <li>a desired cash amount</li>
+        <li>your existing mortgage rate and a potential new rate</li>
+        <li>your current payment and an estimated new payment</li>
+        <li>closing costs and break-even considerations</li>
+      </ul>
+      <p>Before calculating a cash-out refinance scenario, start with your estimated home equity.</p>
+      <p class="links"><a class="btn btn-primary" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Calculate My Home Equity</a>
+        <a class="btn btn-ghost" href="{{ dest.cash_out_refinance_calculator }}">Calculator (coming soon)</a></p>
+    </div>
+  </section>
+
+  <!-- 12. RATES TODAY -->
+  <section class="section">
+    <div class="container narrow">
+      <h2>Cash-Out Refinance Rates Today</h2>
+      <p>Questions about <em>cash out refinance rates today</em> are common &mdash; but rates change constantly and
+        depend on the borrower, the property, the market and the loan characteristics. We do not publish a fixed
+        rate here, because a figure that was accurate last week could mislead you today.</p>
+      <div class="callout">
+        <p>Why the rate matters especially for a cash-out refinance: the new rate generally applies to the
+          <strong>entire new mortgage balance</strong>, not merely to the amount of cash taken out.</p>
+      </div>
+      <p>Future functionality may provide current Florida rate information. Until then, treat any rate as
+        illustrative and confirm it with your lender.</p>
+    </div>
+  </section>
+
+  <!-- 13. RIGHT FOR EVERYONE -->
+  <section class="section section-tint">
+    <div class="container narrow">
+      <h2>Is Cash-Out Refinancing Right for Every Homeowner?</h2>
+      <p>No &mdash; it is not automatically the right solution simply because equity exists. Relevant
+        considerations include:</p>
+      <ul class="checklist">
+        <li>the reason for accessing cash</li>
+        <li>the amount needed</li>
+        <li>your existing mortgage rate versus a new rate</li>
+        <li>how long you expect to stay in the home</li>
+        <li>closing costs</li>
+        <li>your ability to repay</li>
+        <li>alternatives such as a HELOC or a home equity loan</li>
+      </ul>
+      <p class="muted">This is educational information; it is not individualized financial advice and does not
+        guarantee suitability.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container narrow">
+      <h2>Common cash-out refinance questions</h2>
+      <dl class="faq">
+        <dt>How does a cash out refinance work, in one sentence?</dt>
+        <dd>It replaces your existing mortgage with a new, larger mortgage and may provide the difference as cash
+          after applicable costs and payoff amounts.</dd>
+        <dt>Cash out refinance vs HELOC &mdash; which is better?</dt>
+        <dd>Neither is universally better. A cash-out refinance replaces your mortgage and gives a lump sum; a HELOC
+          sits alongside your mortgage and gives a revolving line you draw from as needed.</dd>
+        <dt>Can I use a cash out refinance to pay off credit cards?</dt>
+        <dd>Potentially, yes &mdash; proceeds may be used to pay balances. Be aware this converts unsecured debt into
+          debt secured by your home, and it restructures rather than eliminates debt.</dd>
+        <dt>How much equity do I have?</dt>
+        <dd>Estimate it as your home value minus your mortgage balance, then confirm your situation with the
+          <a href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Home Equity Calculator</a>.</dd>
+        <dt>How to get equity out of my house?</dt>
+        <dd>Common routes are a cash-out refinance, a HELOC, or a home equity loan. Which fits depends on your goal
+          and your existing mortgage rate.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="section cta-final">
+    <div class="container cta-final-inner">
+      <div class="cta-copy">
+        <h2>Start With Your Home Equity</h2>
+        <p>Before deciding whether a cash-out refinance, HELOC or another option makes sense, understand
+          approximately how much equity you currently have.</p>
+      </div>
+      <a class="btn btn-primary btn-lg" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Calculate My Home Equity</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img class="brand-logo" src="{{ url_for('static', filename='cash_out/images/logo.svg') }}" alt="" width="30" height="30">
+      <span class="brand-name">{{ site_name }}</span>
+    </div>
+    <p class="footer-note">Educational information about cash-out refinancing and home equity. This site is not a
+      lender and does not make credit decisions or loan offers. Examples are illustrative only. Rates, costs, terms
+      and underwriting requirements vary by lender &mdash; confirm details with your lender. Mortgage debt is secured
+      by your property.</p>
+    <p class="footer-note muted">&copy; <span data-year>2026</span> {{ site_name }}.</p>
+  </div>
+</footer>
+
+</body>
+</html>

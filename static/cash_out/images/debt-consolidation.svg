@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" font-family="Helvetica,Arial,sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="450" y="42" text-anchor="middle" font-size="16" font-weight="700" fill="#0f2547">Consolidating several balances with one lump sum</text>
+
+  <!-- debts -->
+  <g>
+    <rect x="50" y="72" width="260" height="42" rx="10" fill="#eaf2fd" stroke="#cfe0fb"/>
+    <text x="180" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#16345f">Mortgage</text>
+    <rect x="50" y="124" width="260" height="42" rx="10" fill="#eaf2fd" stroke="#cfe0fb"/>
+    <text x="180" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#16345f">Credit cards</text>
+    <rect x="50" y="176" width="260" height="42" rx="10" fill="#eaf2fd" stroke="#cfe0fb"/>
+    <text x="180" y="202" text-anchor="middle" font-size="13" font-weight="700" fill="#16345f">Personal loans</text>
+    <rect x="50" y="228" width="260" height="42" rx="10" fill="#eaf2fd" stroke="#cfe0fb"/>
+    <text x="180" y="254" text-anchor="middle" font-size="13" font-weight="700" fill="#16345f">Other debts</text>
+  </g>
+
+  <!-- arrow -->
+  <path d="M340 158 h70" stroke="#9db4cf" stroke-width="3"/>
+  <path d="M414 158 l-12 -8 v16 z" fill="#9db4cf"/>
+
+  <!-- result -->
+  <rect x="440" y="100" width="410" height="116" rx="14" fill="#0f2547"/>
+  <text x="645" y="140" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">New mortgage + cash proceeds</text>
+  <text x="645" y="165" text-anchor="middle" font-size="12.5" fill="#cddff6">Potentially used to pay some balances.</text>
+  <text x="645" y="190" text-anchor="middle" font-size="12.5" fill="#9fb8d6">Restructures debt &#8212; it does not erase it.</text>
+</svg>

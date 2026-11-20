@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" font-family="Helvetica,Arial,sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="450" y="52" text-anchor="middle" font-size="16" font-weight="700" fill="#0f2547">How a cash-out refinance works</text>
+
+  <g>
+    <rect x="20" y="112" width="150" height="84" rx="12" fill="#eaf2fd" stroke="#cfe0fb"/>
+    <text x="95" y="150" text-anchor="middle" font-size="13.5" font-weight="700" fill="#16345f">Current</text>
+    <text x="95" y="168" text-anchor="middle" font-size="13.5" font-weight="700" fill="#16345f">home</text>
+
+    <rect x="197" y="112" width="150" height="84" rx="12" fill="#eaf2fd" stroke="#cfe0fb"/>
+    <text x="272" y="150" text-anchor="middle" font-size="13.5" font-weight="700" fill="#16345f">Existing</text>
+    <text x="272" y="168" text-anchor="middle" font-size="13.5" font-weight="700" fill="#16345f">mortgage</text>
+
+    <rect x="374" y="112" width="150" height="84" rx="12" fill="#dbe9fb" stroke="#b9d3f4"/>
+    <text x="449" y="150" text-anchor="middle" font-size="13.5" font-weight="700" fill="#16345f">New larger</text>
+    <text x="449" y="168" text-anchor="middle" font-size="13.5" font-weight="700" fill="#16345f">mortgage</text>
+
+    <rect x="551" y="112" width="150" height="84" rx="12" fill="#0f2547"/>
+    <text x="626" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">Existing mortgage</text>
+    <text x="626" y="168" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">is paid off</text>
+
+    <rect x="728" y="112" width="150" height="84" rx="12" fill="#1d6fe0"/>
+    <text x="803" y="150" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">Difference may</text>
+    <text x="803" y="168" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">become cash*</text>
+  </g>
+
+  <g fill="#1d6fe0">
+    <path d="M178 147 l10 -7 v14 z"/><path d="M355 147 l10 -7 v14 z"/><path d="M532 147 l10 -7 v14 z"/><path d="M709 147 l10 -7 v14 z"/>
+  </g>
+  <text x="450" y="238" text-anchor="middle" font-size="12.5" fill="#64748b">*After applicable costs, payoff amounts and other adjustments.</text>
+</svg>

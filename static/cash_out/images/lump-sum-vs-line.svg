@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" font-family="Helvetica,Arial,sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+
+  <!-- cash-out panel -->
+  <rect x="40" y="36" width="380" height="228" rx="14" fill="#f5f8fc" stroke="#e4e9f1"/>
+  <text x="230" y="70" text-anchor="middle" font-size="15" font-weight="800" fill="#0f2547">CASH-OUT REFINANCE</text>
+  <text x="230" y="150" text-anchor="middle" font-size="30" font-weight="800" fill="#1d6fe0">$$$$$$$$</text>
+  <text x="230" y="192" text-anchor="middle" font-size="13" fill="#33445c">Available cash proceeds after closing</text>
+  <text x="230" y="214" text-anchor="middle" font-size="13" fill="#33445c">Generally a lump sum</text>
+
+  <!-- vs -->
+  <circle cx="450" cy="150" r="26" fill="#0f2547"/>
+  <text x="450" y="157" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">VS</text>
+
+  <!-- heloc panel -->
+  <rect x="480" y="36" width="380" height="228" rx="14" fill="#f5f8fc" stroke="#e4e9f1"/>
+  <text x="670" y="70" text-anchor="middle" font-size="15" font-weight="800" fill="#0f2547">HELOC</text>
+  <text x="670" y="150" text-anchor="middle" font-size="22" font-weight="800" fill="#1d6fe0">$ &#8594; $$ &#8594; $$$ &#8594; $$$$</text>
+  <text x="670" y="192" text-anchor="middle" font-size="13" fill="#33445c">Draw funds as needed</text>
+  <text x="670" y="214" text-anchor="middle" font-size="13" fill="#33445c">Subject to terms and available credit</text>
+</svg>

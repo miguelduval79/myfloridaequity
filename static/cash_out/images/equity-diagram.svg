@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" font-family="Helvetica,Arial,sans-serif">
+  <rect width="900" height="360" fill="#ffffff"/>
+  <!-- home value bracket -->
+  <text x="450" y="40" text-anchor="middle" font-size="15" font-weight="700" fill="#16345f">Home value &#8776; $450,000</text>
+  <path d="M42 56 h816" stroke="#c7d4e6" stroke-width="2"/>
+  <path d="M42 50 v12 M858 50 v12" stroke="#c7d4e6" stroke-width="2"/>
+
+  <!-- stacked bar: mortgage 275/450 = 61.1%, equity 175/450 = 38.9% -->
+  <rect x="40" y="78" width="501" height="82" rx="12" fill="#0f2547"/>
+  <rect x="541" y="78" width="319" height="82" rx="12" fill="#1d6fe0"/>
+  <!-- segment labels -->
+  <text x="290" y="112" text-anchor="middle" font-size="13" fill="#9fb8d6">Mortgage balance</text>
+  <text x="290" y="140" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">$275,000</text>
+  <text x="700" y="112" text-anchor="middle" font-size="13" fill="#cfe0fb">Estimated equity</text>
+  <text x="700" y="140" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">$175,000</text>
+
+  <!-- formula -->
+  <g>
+    <rect x="150" y="212" width="600" height="86" rx="14" fill="#f5f8fc" stroke="#e4e9f1"/>
+    <text x="450" y="252" text-anchor="middle" font-size="21" font-weight="800" fill="#0f2547">$450,000</text>
+    <text x="450" y="252" text-anchor="middle" font-size="21" font-weight="800" fill="#1d6fe0" dx="-120">&#8722;</text>
+    <text x="330" y="252" text-anchor="middle" font-size="21" font-weight="800" fill="#0f2547">$275,000</text>
+    <text x="450" y="252" text-anchor="middle" font-size="21" font-weight="800" fill="#1d6fe0" dx="8">=</text>
+    <text x="560" y="252" text-anchor="middle" font-size="21" font-weight="800" fill="#1d6fe0">$175,000</text>
+    <text x="450" y="280" text-anchor="middle" font-size="13" fill="#64748b">Home value &#8722; Mortgage balance = Estimated equity</text>
+  </g>
+</svg>

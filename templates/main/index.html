@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="robots" content="{{ robots }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main/css/style.css') }}?v=20261010-2">
+  <script defer src="{{ url_for('static', filename='main/js/main.js') }}?v=20261010-2"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">&#127968;</span>
+      <span class="brand-name">{{ site_name }}</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#options">Options</a>
+      <a href="#compare">Compare</a>
+      <a href="#calculators">Calculators</a>
+      <a href="#learn">Learn</a>
+      <a href="#rates">Rates</a>
+      <a class="btn btn-primary btn-sm" href="{{ dest.compare }}">Compare My Options</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Florida homeowners</p>
+        <h1>Unlock Your Home Equity</h1>
+        <p class="lead">Your home may hold more value than you think. Compare the three main ways Florida
+          homeowners access equity &mdash; <strong>Cash-Out Refinance</strong>, <strong>HELOC</strong>, and
+          <strong>Home Equity Loan</strong> &mdash; in plain language, before you talk to anyone.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="{{ dest.compare }}">Compare My Options</a>
+          <a class="btn btn-ghost" href="#options">See the options</a>
+        </div>
+        <p class="hero-note">Free to read. No account, no phone number, no obligation.</p>
+      </div>
+      <div class="hero-art">
+        <img src="{{ url_for('static', filename='main/images/florida-home.jpg') }}"
+             alt="Florida home exterior, representing home equity access."
+             width="1280" height="633" fetchpriority="high" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. OPTIONS -->
+  <section id="options" class="section">
+    <div class="container">
+      <h2>Your Home Equity Options</h2>
+      <p class="section-lead">All three options use the value you have already built in your home. They differ in
+        how you receive the money, how you repay it, and how your existing mortgage is affected.</p>
+
+      <div class="cards three">
+        <a class="card card-link" href="{{ dest.cash_out_refinance }}">
+          <h3>Cash-Out Refinance</h3>
+          <p>You replace your existing mortgage with a larger one and receive part of the difference in cash.
+            Often chosen when someone wants one new loan, one payment, and usually a fixed rate.</p>
+          <span class="text-link">Cash-out refinance explained &rarr;</span>
+        </a>
+        <a class="card card-link" href="{{ dest.heloc }}">
+          <h3>HELOC</h3>
+          <p>A Home Equity Line of Credit is a revolving line secured by your equity. You can borrow during a
+            draw period and typically repay only interest at first, then principal plus interest afterwards.</p>
+          <span class="text-link">How a HELOC works &rarr;</span>
+        </a>
+        <a class="card card-link" href="{{ dest.home_equity_loan }}">
+          <h3>Home Equity Loan</h3>
+          <p>A second loan that gives you a lump sum secured by your home equity, repaid on a fixed schedule &mdash;
+            usually alongside your existing mortgage rather than replacing it.</p>
+          <span class="text-link">Learn about home equity &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. COMPARISON -->
+  <section id="compare" class="section section-alt">
+    <div class="container narrow center">
+      <h2>Not sure which one?</h2>
+      <p>That is the most common question we see. Cash-out refinance, a HELOC and a home equity loan can all
+        &ldquo;get cash out of your house&rdquo; &mdash; but the right choice depends on your rate, your balance, how much
+        equity you have, your goal, and how long you plan to stay.</p>
+      <p>A side-by-side comparison on <em>your</em> numbers makes the decision much clearer than any generic article.</p>
+      <a class="btn btn-primary" href="{{ dest.compare }}">Compare My Options</a>
+    </div>
+  </section>
+
+  <!-- 4. CALCULATORS -->
+  <section id="calculators" class="section">
+    <div class="container">
+      <h2>Helpful Calculators</h2>
+      <p class="section-lead">Simple tools to turn the explanations into numbers for your own situation.</p>
+      <div class="cards two">
+        <a class="card card-link" href="{{ dest.cash_out_refi_calculator }}">
+          <h3>Cash-Out Refinance Calculator</h3>
+          <p>Estimate how much cash you could access and what a new refinanced payment might look like.</p>
+          <span class="text-link">Open the cash-out calculator</span>
+        </a>
+        <a class="card card-link" href="{{ dest.heloc_payment_calculator }}">
+          <h3>HELOC Payment Calculator</h3>
+          <p>See an interest-only draw-period payment and what it becomes once repayment begins.</p>
+          <span class="text-link">Open the HELOC calculator</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. EDUCATIONAL CONTENT -->
+  <section id="learn" class="section section-alt">
+    <div class="container narrow">
+      <h2>Understanding Your Options</h2>
+      <p class="section-lead">Clear explanations of the questions homeowners actually ask &mdash; not a sales pitch.</p>
+
+      <h3>Cash-out refinance vs HELOC vs home equity loan</h3>
+      <p>The three options overlap, which is exactly why they are confusing. A <strong>cash-out refinance</strong>
+        replaces your current mortgage and folds the extra borrowing into one new loan. A <strong>HELOC</strong> leaves
+        your first mortgage alone and adds a flexible line you draw from as needed. A <strong>home equity loan</strong>
+        also leaves the first mortgage alone but gives a single lump sum with a fixed repayment schedule. The right
+        answer usually comes down to whether you want to change your existing mortgage, how much you need, and whether
+        you value flexibility over predictability.</p>
+
+      <h3>How does a HELOC work?</h3>
+      <p>A HELOC is a revolving credit line secured by your equity, similar in spirit to a credit card but tied to
+        your home. It usually has two phases. During the <strong>draw period</strong> you can borrow, repay, and borrow
+        again, and many HELOCs allow <strong>interest-only payments</strong> at this stage. When the draw period ends,
+        the line enters <strong>repayment</strong>: you can no longer draw, and your payment rises because you are now
+        paying down principal as well as interest. That jump &mdash; the payment after the draw period &mdash; surprises
+        a lot of homeowners, so it is worth modelling before you sign. Rate changes matter too, because most HELOCs
+        have variable rates.</p>
+
+      <h3>How much can you borrow, and do you qualify?</h3>
+      <p>Lenders generally look at how much equity you have, your credit profile, your income and your existing debts.
+        Common <strong>HELOC requirements</strong> include a minimum amount of equity, a workable debt-to-income ratio,
+        and acceptable credit. If your credit is imperfect, a <strong>HELOC with bad credit</strong> or a
+        <strong>home equity loan with bad credit</strong> is sometimes still possible, but expect stricter terms &mdash;
+        and be cautious with any offer that promises &ldquo;guaranteed approval&rdquo; or &ldquo;no credit check&rdquo;.
+        The honest path is to understand your realistic range before you apply.</p>
+
+      <h3>How do I get equity out of my house?</h3>
+      <p>Broadly, there are three routes: refinance (cash-out), open a line (HELOC), or take a second loan (home
+        equity loan). Which one fits depends on your goal. Refinancing to a lower rate while taking cash can make
+        sense; a HELOC suits ongoing or staged needs such as renovations; a home equity loan suits a one-time,
+        known expense. Comparing them on your own figures is the fastest way to see which fits.
+
+      <h3>Frequently asked questions</h3>
+      <dl class="faq">
+        <dt>Which is cheaper, a HELOC or a cash-out refinance?</dt>
+        <dd>It depends on your current mortgage rate, how much you need, and how long you will keep the loan. If your
+          current rate is already low, adding a HELOC may preserve it; if refinancing lowers your rate, a cash-out
+          refinance can do double duty. Run both against your numbers.</dd>
+        <dt>Can I get equity out of my house without refinancing?</dt>
+        <dd>Yes. A HELOC or a home equity loan both let you access equity without replacing your existing mortgage.</dd>
+        <dt>What happens to my HELOC payment after the draw period?</dt>
+        <dd>It usually increases, because repayment now includes principal. The size of the increase depends on your
+          balance, term and rate &mdash; model it in advance.</dd>
+        <dt>Do I need perfect credit?</dt>
+        <dd>No, but better credit generally means better terms. If your credit is damaged, focus on understanding your
+          realistic options rather than responding to guaranteed-approval offers.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 6. CURRENT MARKET / RATES -->
+  <section id="rates" class="section">
+    <div class="container narrow">
+      <h2>Cash-Out Refinance Rates Today</h2>
+      <p>Mortgage rates change constantly &mdash; often daily &mdash; so any number printed on a page goes stale quickly.
+        We do not publish a fixed figure here, because a rate that was accurate last week could mislead you today.</p>
+      <p>When you are ready, the most useful step is to see current Florida options compared against your own loan.
+        That personalised, up-to-date rate view is coming as part of the comparison experience.</p>
+      <p><a class="btn btn-primary" href="{{ dest.compare }}">Compare My Options</a></p>
+    </div>
+  </section>
+
+  <!-- 7. FINAL CTA -->
+  <section class="section section-cta">
+    <div class="container narrow center">
+      <h2>Find the Right Home Equity Option for You</h2>
+      <p>Answer a few questions to explore which home-equity option may fit your goals.</p>
+      <a class="btn btn-primary btn-lg" href="{{ dest.get_started }}">Get Started</a>
+      <p class="hero-note">Educational information only. Nothing here is a loan offer or a commitment.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p><strong>{{ site_name }}</strong> &mdash; educational information for Florida homeowners comparing
+      cash-out refinance, HELOC and home equity loan options.</p>
+    <p class="muted">This site is not a lender and does not make loan offers. Figures and examples are illustrative.
+      Mortgage licensing details and disclosures will be added before launch.</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#options">Options</a>
+      <a href="#compare">Compare</a>
+      <a href="#calculators">Calculators</a>
+      <a href="#learn">Learn</a>
+      <a href="#rates">Rates</a>
+    </nav>
+    <p class="muted">&copy; <span data-year>2026</span> {{ site_name }}.</p>
+  </div>
+</footer>
+
+<!-- Equity-first modal: the ONE reusable modal used by all three conversion CTAs
+     (Cash-Out Refinance Calculator, HELOC Payment Calculator, Compare My Options).
+     Opened and populated by static/js/main.js. -->
+<div class="modal-overlay" id="equityModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="equityModalTitle">
+    <button class="modal-close" type="button" data-modal-close aria-label="Close">&times;</button>
+    <h2 id="equityModalTitle">First, Let&rsquo;s Calculate Your Home Equity</h2>
+    <p>Before we can show your potential options, we first need to estimate how much equity you
+      have in your home.</p>
+    <p>CalcMyEquity will help you estimate your current home equity using your estimated property
+      value and current mortgage balance.</p>
+    <a class="btn btn-primary btn-lg" id="equityModalCta" href="https://calcmyequity.com">Calculate My Equity</a>
+    <p class="muted">It only takes a few minutes.</p>
+  </div>
+</div>
+
+</body>
+</html>

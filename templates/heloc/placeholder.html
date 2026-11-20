@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="robots" content="{{ robots }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <meta name="theme-color" content="#0f2547">
+  <link rel="icon" href="{{ url_for('static', filename='heloc/images/logo.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static', filename='heloc/css/style.css') }}?v=20261002-1">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="{{ url_for('static', filename='heloc/images/logo.svg') }}" alt="" width="34" height="34">
+      <span class="brand-name">{{ site_name }}</span>
+    </a>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="/">Back to the HELOC guide</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <section class="section">
+    <div class="container narrow center-pad">
+      <p class="eyebrow">{{ 'Not found' if is_404 else 'Coming soon' }}</p>
+      <h1>{{ heading }}</h1>
+      <p class="lead">{{ blurb }}</p>
+      <p class="muted" style="margin-top:14px">This destination is part of the planned equity-comparison structure and
+        will be connected once the dedicated page is built.</p>
+      <p style="margin-top:24px"><a class="btn btn-primary btn-lg" href="/">Back to the HELOC guide</a></p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-note muted"><strong>{{ site_name }}</strong> &mdash; educational information only, not a loan offer.</p>
+  </div>
+</footer>
+</body>
+</html>

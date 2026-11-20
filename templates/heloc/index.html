@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="robots" content="{{ robots }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta name="theme-color" content="#0f2547">
+  <link rel="icon" href="{{ url_for('static', filename='heloc/images/logo.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static', filename='heloc/css/style.css') }}?v=20261002-1">
+  <script defer src="{{ url_for('static', filename='heloc/js/main.js') }}?v=20261002-1"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/">
+      <img class="brand-logo" src="{{ url_for('static', filename='heloc/images/logo.svg') }}" alt="" width="34" height="34">
+      <span class="brand-name">{{ site_name }}</span>
+    </a>
+    <nav class="nav-links" aria-label="On this page">
+      <a href="#equity">Home Equity</a>
+      <a href="#how">How It Works</a>
+      <a href="#draw-period">Draw Period</a>
+      <a href="#after-draw">After Draw</a>
+      <a href="#requirements">Requirements</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Calculate My Home Equity</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="hero-copy-wrap container">
+      <div class="hero-copy">
+        <p class="eyebrow">HELOC</p>
+        <h1>How Does a HELOC Work?</h1>
+        <p class="hero-sub">A Home Equity Line of Credit lets homeowners borrow against available home equity.
+          Before comparing HELOC amounts, payments or terms, the first step is understanding approximately how
+          much equity you have.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Calculate My Home Equity</a>
+          <a class="btn btn-ghost btn-lg" href="#equity">Start with your equity</a>
+        </div>
+        <p class="hero-note">Educational information only. No account, no phone number, no obligation.</p>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="{{ url_for('static', filename='heloc/images/florida-home.jpg') }}"
+           alt="A Florida home exterior, representing the property whose equity can support a Home Equity Line of Credit."
+           width="1280" height="633" fetchpriority="high" decoding="async">
+    </div>
+  </section>
+
+  <!-- 2. START WITH YOUR HOME EQUITY -->
+  <section id="equity" class="section">
+    <div class="container narrow">
+      <h2>Start With Your Home Equity</h2>
+      <p>Everything starts with understanding your home equity. Home equity is generally the difference between the
+        estimated current value of your home and the remaining mortgage balance.</p>
+
+      <div class="formula" role="math" aria-label="Estimated home equity equals estimated home value minus mortgage balance">
+        <span class="formula-part">Estimated Home Equity</span>
+        <span class="formula-op">=</span>
+        <span class="formula-part">Estimated Home Value</span>
+        <span class="formula-op">&minus;</span>
+        <span class="formula-part">Mortgage Balance</span>
+      </div>
+
+      <figure class="figure">
+        <img src="{{ url_for('static', filename='heloc/images/equity-diagram.svg') }}"
+             alt="Diagram of an estimated $450,000 home value minus a $275,000 mortgage balance giving about $175,000 of estimated home equity."
+             width="900" height="360" loading="lazy" decoding="async">
+        <figcaption>Illustrative example only &mdash; your own numbers will differ.</figcaption>
+      </figure>
+
+      <p>Example: estimated home value <strong>$450,000</strong> &minus; mortgage balance <strong>$275,000</strong>
+        = estimated equity <strong>$175,000</strong>.</p>
+      <div class="callout">
+        <p><strong>Important:</strong> this does <em>not</em> mean a homeowner can necessarily borrow $175,000.
+          Available borrowing depends on lender requirements, loan-to-value limits, credit profile, income, property
+          characteristics and other underwriting factors. This is educational information, not an approval.</p>
+      </div>
+      <p><a class="btn btn-primary" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Calculate Your Home Equity</a></p>
+    </div>
+  </section>
+
+  <!-- 3. WHAT IS A HELOC -->
+  <section id="what" class="section section-tint">
+    <div class="container narrow">
+      <h2>What Is a HELOC?</h2>
+      <p><strong>HELOC</strong> stands for <strong>Home Equity Line of Credit</strong>. It is generally a
+        <em>revolving</em> line of credit secured by the homeowner's property. Unlike receiving one lump sum, a HELOC
+        can let the borrower access funds as needed during the draw period, subject to the HELOC's terms and the
+        available credit on the line.</p>
+
+      <figure class="figure">
+        <img src="{{ url_for('static', filename='heloc/images/heloc-flow.svg') }}"
+             alt="Diagram: home, then home equity, then a HELOC credit line, then access funds as needed."
+             width="900" height="300" loading="lazy" decoding="async">
+        <figcaption>Home &rarr; home equity &rarr; HELOC credit line &rarr; access funds as needed.</figcaption>
+      </figure>
+
+      <p>Because a HELOC is built on home equity, the size and availability of the line depend on how much equity
+        you have. Before estimating what a HELOC could look like,
+        <a href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">understand your home equity</a>.</p>
+    </div>
+  </section>
+
+  <!-- 4. HOW DOES A HELOC WORK -->
+  <section id="how" class="section">
+    <div class="container narrow">
+      <h2>How Does a HELOC Work?</h2>
+      <p>The HELOC lifecycle usually follows a sequence of stages. The exact details vary by lender and product,
+        so treat this as the general shape of how a HELOC works rather than a fixed set of terms:</p>
+      <ol class="steps">
+        <li>Establish available credit based on your equity and the lender's underwriting</li>
+        <li>Enter the <strong>draw period</strong></li>
+        <li>Borrow as needed, up to the available credit</li>
+        <li>Make the required payments</li>
+        <li>The draw period ends</li>
+        <li>The <strong>repayment period</strong> begins</li>
+        <li>Repay outstanding principal and interest according to the loan terms</li>
+      </ol>
+      <div class="callout">
+        <p>Lender-specific terms are not universal. Draw periods, repayment structures and payment rules differ, so
+          always check the terms of the specific HELOC you are considering.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. DRAW PERIOD -->
+  <section id="draw-period" class="section section-tint">
+    <div class="container narrow">
+      <h2>HELOC Draw Period</h2>
+      <p>The <strong>HELOC draw period</strong> is the window during which you can access the available funds on your
+        line. During this time you can typically make multiple draws when permitted, repay what you use, and in many
+        cases borrow again. Payments during the draw period may be structured in different ways depending on the
+        lender and product.</p>
+
+      <figure class="figure">
+        <img src="{{ url_for('static', filename='heloc/images/draw-timeline.svg') }}"
+             alt="Timeline: HELOC opened, then a draw period where you can borrow, repay and borrow again, then the draw period ends and a repayment period begins."
+             width="900" height="260" loading="lazy" decoding="async">
+        <figcaption>Draw period &rarr; draw period ends &rarr; repayment period.</figcaption>
+      </figure>
+
+      <p>It matters to know when the draw period ends, because that transition changes how the line behaves. Exact
+        durations and terms <strong>vary by lender and product</strong> &mdash; there is no single standard.</p>
+    </div>
+  </section>
+
+  <!-- 6. INTEREST-ONLY -->
+  <section id="interest-only" class="section">
+    <div class="container narrow">
+      <h2>HELOC Interest-Only Payments</h2>
+      <p>Some HELOCs may have payment structures during the draw period that allow or require
+        <strong>interest-only payments</strong>. In that structure, a payment during the draw period is primarily
+        based on interest on the amount you have drawn, rather than reducing principal. In short, a
+        <strong>HELOC interest only payment</strong> covers the cost of borrowing on what you have drawn, rather
+        than paying down what you owe.</p>
+      <p>Why this matters:</p>
+      <div class="callout">
+        <p>A lower payment during the draw period <strong>does not necessarily represent the eventual
+          repayment-period payment</strong>. When repayment begins and principal is included, the payment can rise.</p>
+      </div>
+      <p>Not every HELOC operates identically. Whether interest-only payments are available, and under what
+        conditions, depends on the lender and the specific loan terms.</p>
+    </div>
+  </section>
+
+  <!-- 7. AFTER DRAW -->
+  <section id="after-draw" class="section section-tint">
+    <div class="container narrow">
+      <h2>HELOC Payment After Draw Period</h2>
+      <p>One of the most useful concepts to understand is the payment transition. When the draw period ends, the
+        structure of the payment can change:</p>
+
+      <figure class="figure">
+        <img src="{{ url_for('static', filename='heloc/images/payment-change.svg') }}"
+             alt="Payment transition: during the draw period a payment may be interest-focused; after the draw period it generally becomes principal plus interest, so the monthly payment may increase."
+             width="900" height="340" loading="lazy" decoding="async">
+        <figcaption>During draw: a potential interest-focused payment. After draw: principal + interest.</figcaption>
+      </figure>
+
+      <div class="two-cols">
+        <div class="mini-card">
+          <h3>During the draw period</h3>
+          <p>A payment may be interest-focused, which keeps it lower.</p>
+        </div>
+        <div class="mini-card">
+          <h3>After the draw period</h3>
+          <p>Repayment generally includes principal + interest, so the monthly payment may increase.</p>
+        </div>
+      </div>
+
+      <p>This potential increase is sometimes described as <em>payment shock</em>. It is a normal feature of how some
+        HELOCs are structured, and it is simply worth understanding in advance so you can plan for it.</p>
+    </div>
+  </section>
+
+  <!-- 8. PAYMENT CALCULATOR -->
+  <section id="calculator" class="section">
+    <div class="container narrow">
+      <h2>HELOC Payment Calculator</h2>
+      <p>A useful <strong>HELOC payment calculator</strong> would eventually help estimate:</p>
+      <ul class="checklist">
+        <li>a potential draw-period payment</li>
+        <li>the outstanding balance</li>
+        <li>the interest assumptions used</li>
+        <li>the repayment-period payment</li>
+        <li>the possible payment change after the draw period</li>
+        <li>the total repayment implications</li>
+      </ul>
+      <p>Before calculating HELOC payments, start by understanding your estimated home equity &mdash; it is the
+        prerequisite that sets the ceiling for the line.</p>
+      <p><a class="btn btn-primary" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Calculate My Home Equity First</a></p>
+      <div class="callout">
+        <p>This page explains the concepts. It does not calculate HELOC payments for you. Treat any figures as
+          illustrative rather than an offer or an approval.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. REQUIREMENTS -->
+  <section id="requirements" class="section section-tint">
+    <div class="container narrow">
+      <h2>HELOC Requirements</h2>
+      <p>Lenders may consider several factors when evaluating a HELOC. At a high level these can include:</p>
+      <ul class="checklist">
+        <li>available home equity</li>
+        <li>combined loan-to-value</li>
+        <li>credit profile</li>
+        <li>income</li>
+        <li>existing debt obligations</li>
+        <li>the property itself</li>
+        <li>occupancy</li>
+        <li>lender-specific underwriting requirements</li>
+      </ul>
+      <p>Specific thresholds vary by lender and are not universal, so we do not publish approval criteria or tell you
+        whether you qualify. What we can say is that the first measurable variable is home equity.</p>
+      <p><a class="btn btn-primary" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Estimate My Home Equity</a></p>
+    </div>
+  </section>
+
+  <!-- 10. HELOC VS OTHER OPTIONS -->
+  <section id="options" class="section">
+    <div class="container narrow">
+      <h2>HELOC vs Other Equity Options</h2>
+      <p>A HELOC is only one way to access home equity. The three common approaches differ mainly in how you receive
+        the money and how you repay it.</p>
+      <div class="compare-cards">
+        <article class="mini-card">
+          <h3>HELOC</h3>
+          <p>A revolving line you draw from as needed. Flexible access, often with a draw period.</p>
+        </article>
+        <article class="mini-card">
+          <h3>Home Equity Loan</h3>
+          <p>A single lump sum with a fixed repayment schedule.
+            <a href="{{ dest.heloc_vs_home_equity_loan }}">HELOC vs home equity loan &rarr;</a></p>
+        </article>
+        <article class="mini-card">
+          <h3>Cash-Out Refinance</h3>
+          <p>Replace your mortgage with a larger one and take the difference in cash.
+            <a href="{{ dest.cash_out_refinance }}">Cash-out refinance &rarr;</a></p>
+        </article>
+      </div>
+      <p class="muted">Specialised comparison pages are coming; the links above are placeholders for now.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-tint">
+    <div class="container narrow">
+      <h2>Common HELOC questions</h2>
+      <dl class="faq">
+        <dt>How does a HELOC work in simple terms?</dt>
+        <dd>It turns available home equity into a revolving credit line you can draw from during the draw period and
+          repay over time, instead of receiving a single lump sum.</dd>
+        <dt>How long is a HELOC draw period?</dt>
+        <dd>It varies by lender and product &mdash; there is no universal duration. Check the terms of the specific
+          line you are considering.</dd>
+        <dt>Is a HELOC interest-only payment always available?</dt>
+        <dd>No. Some HELOCs allow or require interest-focused payments during the draw period; others do not. It
+          depends on the lender and loan terms.</dd>
+        <dt>Does the HELOC payment after the draw period increase?</dt>
+        <dd>It can. When repayment begins and principal is included, the monthly payment may be higher than the
+          interest-focused payment during the draw period.</dd>
+        <dt>What are common HELOC requirements?</dt>
+        <dd>Lenders may look at available equity, combined loan-to-value, credit profile, income, debts, the property
+          and occupancy, among other underwriting factors. Thresholds vary.</dd>
+        <dt>How much equity do I have?</dt>
+        <dd>Estimate it as your home value minus your mortgage balance, then confirm your situation with the
+          <a href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Home Equity Calculator</a>.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="section cta-final">
+    <div class="container cta-final-inner">
+      <div class="cta-copy">
+        <h2>Everything Starts With Your Home Equity</h2>
+        <p>Before comparing HELOC limits, payments or borrowing options, understand approximately how much equity you
+          currently have in your home.</p>
+      </div>
+      <a class="btn btn-primary btn-lg" href="{{ dest.home_equity_calculator }}" target="_blank" rel="noopener">Calculate My Home Equity</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img class="brand-logo" src="{{ url_for('static', filename='heloc/images/logo.svg') }}" alt="" width="30" height="30">
+      <span class="brand-name">{{ site_name }}</span>
+    </div>
+    <p class="footer-note">Educational information about home equity and how a HELOC works. This site is not a lender
+      and does not make credit decisions or loan offers. Examples are illustrative only. Rates, limits, draw periods,
+      repayment terms and underwriting requirements vary by lender &mdash; confirm details with your lender.</p>
+    <p class="footer-note muted">&copy; <span data-year>2026</span> {{ site_name }}.</p>
+  </div>
+</footer>
+
+</body>
+</html>
